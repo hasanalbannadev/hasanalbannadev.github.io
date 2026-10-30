@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 400" preserveAspectRatio="xMidYMax slice">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9e8ff"/><stop offset="1" stop-color="#eef5ff"/></linearGradient></defs>
+<rect width="420" height="400" fill="url(#g)"/>
+<ellipse cx="210" cy="420" rx="170" ry="150" fill="#1b2437"/>
+<rect x="190" y="215" width="40" height="50" rx="14" fill="#c98f6c"/>
+<ellipse cx="210" cy="160" rx="62" ry="76" fill="#d9a07c"/>
+<path d="M148 150c-4-52 28-82 64-82s66 28 62 82c-8-24-22-38-62-38s-54 14-64 38z" fill="#151515"/>
+<rect x="120" y="340" width="180" height="60" rx="6" fill="#c9ced8"/>
+<text x="210" y="55" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#6b7a99">Replace: public/images/profile.svg → your photo</text>
+</svg>
