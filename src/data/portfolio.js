@@ -150,8 +150,8 @@ export const projects = [
     description:
       "A task manager with JWT login and sign-up, OTP password recovery, a dashboard with status counts, and full task CRUD (create, filter, update status, delete) on a REST API.",
     tech: ["Flutter", "Dart", "REST API", "JWT", "SharedPreferences", "Google Fonts"],
-    image: "/images/task-manager.png",
-    github: "https://github.com/hasanalbannadev/task_manager_app.jpg",
+    image: "/images/task_manager_app.jpg",
+    github: "https://github.com/hasanalbannadev/task_manager_app",
   },
   {
     category: "flutter",
