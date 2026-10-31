@@ -1,10 +1,6 @@
-// =====================================================================
-//  পুরো পোর্টফোলিওর সব কনটেন্ট এই এক ফাইলে।
-//  নতুন প্রজেক্ট / স্কিল / অভিজ্ঞতা যোগ করতে শুধু এই ফাইল এডিট করুন।
-//  ছবি বদলাতে: public/images/ এ আসল ছবি রাখুন, তারপর নিচে path ঠিক করুন।
-// =====================================================================
 
-// ---------- ব্যক্তিগত তথ্য ----------
+
+// ---------- ---
 export const profile = {
   firstName: "Hasan",
   lastName: "Al Banna",
@@ -16,20 +12,19 @@ export const profile = {
   email: "albannamdhasan48@gmail.com",
   phone: "+880 1336-913528",
   location: "Uttara, Dhaka, Bangladesh",
-  years: "4+", // অভিজ্ঞতার বছর
+  years: "4+",
 
-  // হিরো সেকশনের ছবি (আসল ছবি দিলে এই path বদলান, যেমন "/images/hasan.png")
+
   photo: "/images/Banna.jpg",
 
-  // CV ডাউনলোড — public/cv/ ফোল্ডারের প্রফেশনাল CV (নতুন CV দিলে একই নামে রিপ্লেস করুন)
+
   cv: "/cv/Hasan_Al_Banna_CV.pdf",
   cvFileName: "Hasan_Al_Banna_CV.pdf",
 
-  // এই পোর্টফোলিওর নিজের GitHub রিপোজিটরি
+
   portfolioRepo: "https://github.com/hasanalbannadev/hasanalbannadev.github.io",
 
-  // সোশ্যাল লিংক — যেটায় লিংক বসাবেন সেটাই সাইটে দেখাবে। ফাঁকা ("") থাকলে আইকন লুকানো থাকবে।
-  // সমর্থিত: github, linkedin, x, facebook, instagram, youtube, telegram, whatsapp
+ 
   social: {
     github: "https://github.com/hasanalbannadev",
     linkedin: "https://www.linkedin.com/in/md-hasan-al-banna-632302233/",
@@ -37,11 +32,11 @@ export const profile = {
     facebook: "https://www.facebook.com/share/1C8b5e8VSN/",
     instagram: "https://www.instagram.com/mdbanna4",
     telegram: "https://t.me/+8801336913528",
-    whatsapp: "https://wa.me/8801580361198", // যেমন: "https://wa.me/8801XXXXXXXXX"
+    whatsapp: "https://wa.me/8801580361198", 
   },
 };
 
-// সোশ্যাল আইকনের ক্রম ও নাম (লিংক ফাঁকা হলে বাদ পড়ে; ইমেইল সবসময় থাকে)
+
 const socialOrder = [
   ["github", "GitHub"],
   ["linkedin", "LinkedIn"],
@@ -52,7 +47,7 @@ const socialOrder = [
   ["whatsapp", "WhatsApp"],
 ];
 
-// Hero, Footer ও Let's Connect — তিন জায়গায় এই তালিকাই ব্যবহার হয়
+// Hero, Footer ও Let's Connect — 
 export const socialLinks = [
   ...socialOrder
     .filter(([name]) => profile.social[name])
@@ -60,7 +55,7 @@ export const socialLinks = [
   { name: "mail", label: "Email", href: `mailto:${profile.email}` },
 ];
 
-// ---------- নেভিগেশন (id গুলো সেকশনের id এর সাথে মিলতে হবে) ----------
+// ----------  ----------
 export const navLinks = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
@@ -71,23 +66,21 @@ export const navLinks = [
   { id: "contact", label: "Contact" },
 ];
 
-// ---------- হিরোর ডান পাশের তিনটা আইটেম ----------
+// ---------- ----------
 export const heroHighlights = [
   { icon: "flutter", label: "Flutter" },
   { icon: "code", label: "Web Development" },
   { icon: "cloud", label: "Cloud & Server" },
 ];
 
-// ---------- Quick Info কার্ড ----------
+// ---------- Quick Info----------
 export const quickInfo = [
   { icon: "target", label: "Focus", value: "Flutter & Web Development" },
   { icon: "clock", label: "Availability", value: "Open for new opportunities" },
   { icon: "pin", label: "Location", value: "Savar, Dhaka, Bangladesh" },
 ];
 
-// ---------- স্কিল ----------
-// icon = Icons.jsx এর BrandIcon নাম। image দিলে (যেমন "/images/skills/flutter.png") সেটাই দেখাবে।
-// extra: true মানে "View All Skills" চাপলে তবেই দেখা যাবে (প্রথম ১২টা সবসময় দেখায়)।
+
 export const skills = [
   { name: "Flutter", sub: "Mobile App", icon: "flutter" },
   { name: "Firebase", sub: "Backend & Auth", icon: "firebase" },
@@ -101,7 +94,6 @@ export const skills = [
   { name: "Git & GitHub", sub: "Version Control", icon: "github" },
   { name: "Cloudflare", sub: "CDN & Security", icon: "cloudflare" },
   { name: "REST API", sub: "Integration", icon: "api" },
-  // ↓ "View All Skills" চাপলে এগুলো দেখাবে
   { name: "FastAPI", sub: "Python Backend", icon: "fastapi", extra: true },
   { name: "Supabase", sub: "Backend as a Service", icon: "supabase", extra: true },
   { name: "Hive", sub: "Local Storage", icon: "hive", extra: true },
@@ -120,13 +112,13 @@ export const skills = [
   { name: "Claude AI", sub: "AI-based Coding", icon: "claude", extra: true },
 ];
 
-// ---------- প্রজেক্ট গ্রুপ (সেকশনের হেডার ও কয়টা কার্ড আগে দেখাবে) ----------
+// ----------  ----------
 export const projectGroups = [
   {
     key: "flutter",
     title: "Flutter Projects",
     icon: "smartphone",
-    limit: 2, // শুরুতে ২টা দেখাবে, বাকিগুলো "View All" এ
+    limit: 2, 
     columns: 2,
     viewAll: "View All Flutter Projects",
   },
@@ -148,22 +140,18 @@ export const projectGroups = [
   },
 ];
 
-// ---------- প্রজেক্ট কার্ড ----------
-// নতুন কার্ড বাড়াতে নিচের যেকোনো একটা ব্লক কপি করে পেস্ট করুন।
-// category: "flutter" | "web" | "cloud"
-// github: রিপোজিটরির লিংক — "GitHub" বাটনে ক্লিক করলে নতুন ট্যাবে খুলবে (না দিলে বাটন দেখাবে না)
-// tech: কার্ডের নিচের টেকনোলজি চিপ
+
 export const projects = [
   // ---------------- Flutter ----------------
   {
     category: "flutter",
-    title: "TaskMaster",
+    title: "Task Manager App",
     badge: "Flutter App",
     description:
       "A task manager with JWT login and sign-up, OTP password recovery, a dashboard with status counts, and full task CRUD (create, filter, update status, delete) on a REST API.",
     tech: ["Flutter", "Dart", "REST API", "JWT", "SharedPreferences", "Google Fonts"],
     image: "/images/task-manager.png",
-    github: "https://github.com/hasanalbannadev/task_manager_app",
+    github: "https://github.com/hasanalbannadev/task_manager_app.jpg",
   },
   {
     category: "flutter",
@@ -227,7 +215,7 @@ export const projects = [
       "Domain, hosting, email server, FTP server and server configuration with secure setup.",
     tech: ["Linux", "Nginx", "Docker", "Cloudflare"],
     image: "/images/cloud-server.svg",
-    // ক্লাউড কার্ডের ডান পাশের "Key Features" লিস্ট
+    
     features: [
       "Domain & Hosting Setup",
       "Email Server Configuration",
@@ -239,7 +227,7 @@ export const projects = [
   },
 ];
 
-// ---------- কাজের অভিজ্ঞতা (নতুন থেকে পুরোনো) ----------
+// ---------- ----------
 export const experience = [
   {
     title: "Lab Instructor (Computer Lab)",
@@ -280,7 +268,7 @@ export const experience = [
   },
 ];
 
-// ---------- শিক্ষা ----------
+// ---------- ----------
 export const education = [
   {
     icon: "cap",
