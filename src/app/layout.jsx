@@ -1,4 +1,3 @@
-
 import "./globals.css";
 
 export const metadata = {
@@ -11,11 +10,23 @@ export const metadata = {
     "Next.js Developer",
     "Full Stack Developer Portfolio",
     "Web Developer Bangladesh",
-    "Software Engineer Portfolio"
+    "Software Engineer Portfolio",
+    "Flutter Developer",
+    "Android App Developer",
+    "iOS App Developer",
+    "Mobile App Developer",
+    "Web Application Developer",
+    "E-commerce Developer",
+    "Cloud Computing Projects",
+    "Server-side Development",
+    "Portfolio Website",
   ],
   authors: [{ name: "Md. Hasan Al Banna" }],
   creator: "Md. Hasan Al Banna",
   icons: { icon: "/logo.svg" },
+  verification: {
+    google: "O3P1kNKZjFa4mDVIi5MgD2zNxy0WVP6oAX47IcpE3SY",
+  },
   openGraph: {
     title: "Md. Hasan Al Banna — Flutter & Next.js Developer Portfolio",
     description: "Professional portfolio showcasing mobile apps, web development, e-commerce systems, and cloud projects by Md. Hasan Al Banna.",
