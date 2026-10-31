@@ -1,11 +1,32 @@
-// রুট লেআউট — ফন্ট, মেটাডেটা ও পুরো পেজের কাঠামো
+
 import "./globals.css";
 
 export const metadata = {
-  title: "Hasan Al Banna — Flutter & Web Developer",
+  title: "Md. Hasan Al Banna — Flutter & Next.js Developer Portfolio",
   description:
-    "Portfolio of Hasan Al Banna — Flutter & Web Developer. Mobile apps, web, e-commerce and cloud & server projects.",
+    "Explore the professional portfolio of Md. Hasan Al Banna, a skilled Flutter & Next.js Full Stack Developer specializing in mobile apps, web applications, e-commerce, and cloud & server projects.",
+  keywords: [
+    "Md Hasan Al Banna",
+    "Flutter Developer Bangladesh",
+    "Next.js Developer",
+    "Full Stack Developer Portfolio",
+    "Web Developer Bangladesh",
+    "Software Engineer Portfolio"
+  ],
+  authors: [{ name: "Md. Hasan Al Banna" }],
+  creator: "Md. Hasan Al Banna",
   icons: { icon: "/logo.svg" },
+  openGraph: {
+    title: "Md. Hasan Al Banna — Flutter & Next.js Developer Portfolio",
+    description: "Professional portfolio showcasing mobile apps, web development, e-commerce systems, and cloud projects by Md. Hasan Al Banna.",
+    url: "https://hasanalbannadev.github.io",
+    siteName: "Md. Hasan Al Banna Portfolio",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }) {
