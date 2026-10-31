@@ -2,16 +2,10 @@
 //  হিরো সেকশন — নাম, পরিচিতি, বাটন, সোশ্যাল আইকন, ছবি ও ডানের তিনটা হাইলাইট
 //  ছবি বদলাতে: data/portfolio.js এ profile.photo এর path বদলান
 // =====================================================================
-import { profile, heroHighlights } from "../data/portfolio";
+import { profile, heroHighlights, socialLinks as socials } from "../data/portfolio";
 import { Icon, BrandIcon } from "./Icons";
 
-// সোশ্যাল আইকনের তালিকা (গোল বর্ডার বাটন)
-const socials = [
-  { name: "github", href: profile.social.github, label: "GitHub" },
-  { name: "linkedin", href: profile.social.linkedin, label: "LinkedIn" },
-  { name: "x", href: profile.social.x, label: "X" },
-  { name: "mail", href: `mailto:${profile.email}`, label: "Email" },
-];
+// সোশ্যাল আইকন data/portfolio.js এর socialLinks থেকে আসে (লিংক দিলেই দেখাবে)
 
 export default function Hero() {
   return (

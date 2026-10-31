@@ -2,7 +2,7 @@
 //  Experience + Education + Download CV + Let's Connect (একই সারিতে ৩ কলাম)
 //  Download CV বাটনে ক্লিক করলে CV ফাইল ডাউনলোড হবে
 // =====================================================================
-import { profile, experience, education } from "../data/portfolio";
+import { profile, experience, education, socialLinks } from "../data/portfolio";
 import { Icon } from "./Icons";
 
 // কলামের ছোট হেডার (গোল আইকন + টাইটেল)
@@ -17,13 +17,18 @@ function ColumnTitle({ icon, children }) {
   );
 }
 
-// Let's Connect এর আইকন রো
-const connect = [
-  { icon: "mail", href: `mailto:${profile.email}`, color: "text-[#ea4335]", label: "Email" },
-  { icon: "linkedin", href: profile.social.linkedin, color: "text-[#0a66c2]", label: "LinkedIn" },
-  { icon: "github", href: profile.social.github, color: "text-[#111]", label: "GitHub" },
-  { icon: "whatsapp", href: profile.social.whatsapp, color: "text-[#25d366]", label: "WhatsApp" },
-];
+// Let's Connect এর আইকনের রঙ (লিংক data/portfolio.js এর socialLinks থেকে আসে)
+const colors = {
+  github: "text-[#111]",
+  linkedin: "text-[#0a66c2]",
+  x: "text-[#111]",
+  facebook: "text-[#1877f2]",
+  instagram: "text-[#e1306c]",
+  youtube: "text-[#ff0000]",
+  telegram: "text-[#229ed9]",
+  whatsapp: "text-[#25d366]",
+  mail: "text-[#ea4335]",
+};
 
 export default function Experience() {
   return (
@@ -100,17 +105,17 @@ export default function Experience() {
             <p className="mt-1 text-[10.5px] leading-snug text-ink">
               Feel free to contact me for collaborations, job opportunities or just to say hello.
             </p>
-            <div className="mt-3 flex items-center gap-4">
-              {connect.map((c) => (
+            <div className="mt-3 flex flex-wrap items-center gap-4">
+              {socialLinks.map((c) => (
                 <a
-                  key={c.label}
+                  key={c.name}
                   href={c.href}
-                  target={c.icon === "mail" ? undefined : "_blank"}
+                  target={c.name === "mail" ? undefined : "_blank"}
                   rel="noopener noreferrer"
                   aria-label={c.label}
-                  className={`${c.color} transition hover:scale-110`}
+                  className={`${colors[c.name]} transition hover:scale-110`}
                 >
-                  <Icon name={c.icon} size={21} />
+                  <Icon name={c.name} size={21} />
                 </a>
               ))}
               <a href="#contact" aria-label="Contact" className="ml-1 text-navy transition hover:text-brand">

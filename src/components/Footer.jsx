@@ -1,15 +1,8 @@
 // =====================================================================
 //  ফুটার — লোগো, মেনু লিংক, কপিরাইট ও সোশ্যাল আইকন
 // =====================================================================
-import { profile, navLinks } from "../data/portfolio";
+import { profile, navLinks, socialLinks as socials } from "../data/portfolio";
 import { Icon, Logo } from "./Icons";
-
-const socials = [
-  { name: "github", href: profile.social.github, label: "GitHub" },
-  { name: "linkedin", href: profile.social.linkedin, label: "LinkedIn" },
-  { name: "x", href: profile.social.x, label: "X" },
-  { name: "mail", href: `mailto:${profile.email}`, label: "Email" },
-];
 
 export default function Footer() {
   return (

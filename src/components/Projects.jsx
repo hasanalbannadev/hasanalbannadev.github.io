@@ -2,39 +2,21 @@
 // =====================================================================
 //  Projects Showcase — ৩টা গ্রুপ: Flutter / Web & E-commerce / Cloud & Server
 //  কার্ডগুলো data/portfolio.js এর `projects` থেকে আসে (নতুন কার্ড সেখানে যোগ করুন)
-//  প্রতিটা গ্রুপে শুরুতে `limit` টা কার্ড দেখায়, "View All" চাপলে সব দেখায়
+//  প্রতিটা গ্রুপে শুরুতে `limit` টা কার্ড দেখায়।
+//  গ্রুপে limit এর বেশি কার্ড থাকলে "View All ..." দেখায় — চাপলে ওই গ্রুপের সব কার্ড দেখায়।
+//  কার্ডে শুধু GitHub বাটন (নতুন ট্যাবে খোলে), Live Demo বাটন নেই।
 // =====================================================================
 import { useState } from "react";
-import { projects, projectGroups, profile } from "../data/portfolio";
+import { projects, projectGroups } from "../data/portfolio";
 import { Icon } from "./Icons";
 import { SectionHeading, ArrowLink } from "./Ui";
 
-// ছবির সাইজ (গ্রুপ অনুযায়ী)
+// ছবির সাইজ (গ্রুপ অনুযায়ী) — ছবি কেটে না গিয়ে পুরোটা দেখায় (object-contain)
 const imgSize = {
-  flutter: "h-[150px] w-[170px]",
-  web: "h-[150px] w-[230px]",
+  flutter: "h-[150px] w-[200px]",
+  web: "h-[160px] w-[240px]",
   cloud: "h-[150px] w-[210px]",
 };
-
-// লিংক বাটন — link "#" বা খালি হলে ক্লিকে কিছু হবে না
-function LinkButton({ href, filled, icon, children }) {
-  const live = href && href !== "#";
-  const cls = filled
-    ? "bg-brand text-white hover:bg-brand-dark"
-    : "border border-line bg-white text-navy hover:border-brand hover:text-brand";
-  return (
-    <a
-      href={live ? href : "#"}
-      target={live ? "_blank" : undefined}
-      rel="noopener noreferrer"
-      onClick={live ? undefined : (e) => e.preventDefault()}
-      className={`inline-flex items-center gap-2 rounded-md px-4 py-2 text-[12px] font-medium transition ${cls}`}
-    >
-      <Icon name={icon} size={13} />
-      {children}
-    </a>
-  );
-}
 
 // টেক চিপ (Flutter, Dart ...)
 function Chips({ items }) {
@@ -49,7 +31,7 @@ function Chips({ items }) {
   );
 }
 
-// কার্ডের ডান পাশের টেক্সট অংশ (টাইটেল, বর্ণনা, চিপ, বাটন)
+// কার্ডের টেক্সট অংশ (টাইটেল, বর্ণনা, চিপ, GitHub বাটন)
 function CardBody({ p }) {
   return (
     <div className="min-w-0 flex-1">
@@ -61,10 +43,21 @@ function CardBody({ p }) {
       </div>
       <p className="mt-2 text-[12.5px] leading-relaxed text-ink">{p.description}</p>
       <Chips items={p.tech} />
-      <div className="mt-4 flex flex-wrap gap-3">
-        <LinkButton href={p.demo} filled icon="external">Live Demo</LinkButton>
-        <LinkButton href={p.github} icon="github">GitHub</LinkButton>
-      </div>
+
+      {/* github লিংক থাকলেই বাটন দেখাবে — ক্লিকে নতুন ট্যাবে প্রজেক্টের GitHub খুলবে */}
+      {p.github && (
+        <div className="mt-4">
+          <a
+            href={p.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-md border border-line bg-white px-4 py-2 text-[12px] font-medium text-navy transition hover:border-brand hover:text-brand"
+          >
+            <Icon name="github" size={14} />
+            GitHub
+          </a>
+        </div>
+      )}
     </div>
   );
 }
@@ -121,7 +114,7 @@ function Group({ group }) {
   const all = projects.filter((p) => p.category === group.key);
   if (all.length === 0) return null;
 
-  const hasMore = all.length > group.limit;
+  const hasMore = all.length > group.limit; // শুধু তখনই "View All" দেখাবে
   const list = expanded ? all : all.slice(0, group.limit);
 
   return (
@@ -133,13 +126,10 @@ function Group({ group }) {
           </span>
           <h3 className="text-[16px] font-semibold text-brand">{group.title}</h3>
         </div>
-        {hasMore ? (
+        {hasMore && (
           <ArrowLink onClick={() => setExpanded((v) => !v)}>
             {expanded ? "Show Less" : group.viewAll}
           </ArrowLink>
-        ) : (
-          // আরও কার্ড না থাকলে GitHub এর রিপোজিটরি পেজে নিয়ে যাবে
-          <ArrowLink href={`${profile.social.github}?tab=repositories`}>{group.viewAll}</ArrowLink>
         )}
       </div>
 

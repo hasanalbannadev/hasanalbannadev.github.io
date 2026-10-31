@@ -14,25 +14,53 @@ export const profile = {
   about:
     "I specialize in building modern, fast and responsive web and mobile applications with Flutter and web technologies. I have experience in domain & hosting, server configuration, cloud computing and email/FTP server management. I love solving real-world problems and continuously learning new technologies.",
   email: "albannamdhasan48@gmail.com",
-  phone: "+880 1580-361198",
-  location: "Uttara, Dhaka, Bangladesh",
-  years: "5+", // অভিজ্ঞতার বছর
+  phone: "+880 1336-913528",
+  location: "Savar, Dhaka, Bangladesh",
+  years: "4+", // অভিজ্ঞতার বছর
 
   // হিরো সেকশনের ছবি (আসল ছবি দিলে এই path বদলান, যেমন "/images/hasan.png")
-  photo: "/images/profile.png",
+  photo: "/images/Banna.jpg",
 
-  // CV ডাউনলোড — public/cv/ ফোল্ডারে আসল PDF রাখুন (একই নামে অথবা নিচের path বদলে)
+  // CV ডাউনলোড — public/cv/ ফোল্ডারের প্রফেশনাল CV (নতুন CV দিলে একই নামে রিপ্লেস করুন)
   cv: "/cv/Hasan_Al_Banna_CV.pdf",
   cvFileName: "Hasan_Al_Banna_CV.pdf",
 
-  // সোশ্যাল লিংক — আসল লিংক বসান
+  // এই পোর্টফোলিওর নিজের GitHub রিপোজিটরি
+  portfolioRepo: "https://github.com/HASANALBANNA2024/hasan_al_banna",
+
+  // সোশ্যাল লিংক — যেটায় লিংক বসাবেন সেটাই সাইটে দেখাবে। ফাঁকা ("") থাকলে আইকন লুকানো থাকবে।
+  // সমর্থিত: github, linkedin, x, facebook, instagram, youtube, telegram, whatsapp
   social: {
-    github: "https://github.com/yourusername",
-    linkedin: "https://www.linkedin.com/in/yourusername",
-    x: "https://x.com/yourusername",
-    whatsapp: "https://wa.me/8801580361198",
+    github: "https://github.com/HASANALBANNA2024",
+    linkedin: "",
+    x: "",
+    facebook: "",
+    instagram: "",
+    youtube: "",
+    telegram: "",
+    whatsapp: "", // যেমন: "https://wa.me/8801XXXXXXXXX"
   },
 };
+
+// সোশ্যাল আইকনের ক্রম ও নাম (লিংক ফাঁকা হলে বাদ পড়ে; ইমেইল সবসময় থাকে)
+const socialOrder = [
+  ["github", "GitHub"],
+  ["linkedin", "LinkedIn"],
+  ["x", "X"],
+  ["facebook", "Facebook"],
+  ["instagram", "Instagram"],
+  ["youtube", "YouTube"],
+  ["telegram", "Telegram"],
+  ["whatsapp", "WhatsApp"],
+];
+
+// Hero, Footer ও Let's Connect — তিন জায়গায় এই তালিকাই ব্যবহার হয়
+export const socialLinks = [
+  ...socialOrder
+    .filter(([name]) => profile.social[name])
+    .map(([name, label]) => ({ name, label, href: profile.social[name] })),
+  { name: "mail", label: "Email", href: `mailto:${profile.email}` },
+];
 
 // ---------- নেভিগেশন (id গুলো সেকশনের id এর সাথে মিলতে হবে) ----------
 export const navLinks = [
@@ -56,7 +84,7 @@ export const heroHighlights = [
 export const quickInfo = [
   { icon: "target", label: "Focus", value: "Flutter & Web Development" },
   { icon: "clock", label: "Availability", value: "Open for new opportunities" },
-  { icon: "pin", label: "Location", value: "Feni, Bangladesh" },
+  { icon: "pin", label: "Location", value: "Savar, Dhaka, Bangladesh" },
 ];
 
 // ---------- স্কিল ----------
@@ -125,41 +153,74 @@ export const projectGroups = [
 // ---------- প্রজেক্ট কার্ড ----------
 // নতুন কার্ড বাড়াতে নিচের যেকোনো একটা ব্লক কপি করে পেস্ট করুন।
 // category: "flutter" | "web" | "cloud"
-// demo / github: আসল লিংক দিন ("#" থাকলে ক্লিকে কিছু হবে না)
+// github: রিপোজিটরির লিংক — "GitHub" বাটনে ক্লিক করলে নতুন ট্যাবে খুলবে (না দিলে বাটন দেখাবে না)
+// tech: কার্ডের নিচের টেকনোলজি চিপ
 export const projects = [
+  // ---------------- Flutter ----------------
   {
     category: "flutter",
     title: "TaskMaster",
     badge: "Flutter App",
     description:
-      "A simple and clean task management app with local storage, dark mode and smooth UI.",
-    tech: ["Flutter", "Dart", "Hive", "Provider"],
-    image: "/images/taskmaster.svg",
-    demo: "#",
-    github: "#",
+      "A task manager with JWT login and sign-up, OTP password recovery, a dashboard with status counts, and full task CRUD (create, filter, update status, delete) on a REST API.",
+    tech: ["Flutter", "Dart", "REST API", "JWT", "SharedPreferences", "Google Fonts"],
+    image: "/images/task-manager.png",
+    github: "https://github.com/HASANALBANNA2024/task_manager_app",
   },
   {
     category: "flutter",
-    title: "HealthCare+",
+    title: "Chakri Info",
     badge: "Flutter App",
     description:
-      "A healthcare app with appointment booking, doctor list and more features.",
-    tech: ["Flutter", "Firebase", "REST API"],
-    image: "/images/healthcare.svg",
-    demo: "#",
-    github: "#",
+      "A Bangla job circular app with category-wise listings (BCS, Govt, Bank, Defense, NGO...), job search and a preparation cell for previous questions.",
+    tech: ["Flutter", "Dart", "Firebase", "Firestore"],
+    image: "/images/chakri-info.jpg",
+    github: "https://github.com/HASANALBANNA2024/chakri_Info",
+  },
+  {
+    category: "flutter",
+    title: "Holy Quran & Islamic Suite",
+    badge: "Flutter App",
+    description:
+      "An offline-first Quran app with 10-language translations, a digital tasbih with audio and haptic feedback, location-based prayer times, bookmarks and reciter selection.",
+    tech: ["Flutter", "Dart", "Provider", "just_audio", "Adhan", "SharedPreferences"],
+    image: "/images/holy-quran.jpg",
+    github: "https://github.com/HASANALBANNA2024/holy_quran",
+  },
+  {
+    category: "flutter",
+    title: "Smart Mirror",
+    badge: "Flutter App",
+    description:
+      "A real-time smart mirror app with HD live camera, freeze frame, 1x to 5x zoom, studio lighting modes, 3s and 5s timers, and an in-app gallery with save and share.",
+    tech: ["Flutter", "Dart", "Camera", "Gal", "SharePlus", "SharedPreferences"],
+    image: "/images/mirror.png",
+    github: "https://github.com/HASANALBANNA2024/mirror",
+  },
+
+  // ---------------- Web & E-commerce ----------------
+  {
+    category: "web",
+    title: "Akhi Lifestyle Admin Panel",
+    badge: "E-commerce Admin Panel",
+    description:
+      "Full admin panel for the Akhi Lifestyle shop: products, inventory, orders, payments, customers, coupons, banners, reviews, reports and staff roles, powered by a FastAPI backend.",
+    tech: ["Next.js", "React", "FastAPI", "REST API", "JavaScript"],
+    image: "/images/akhi-admin.jpg",
+    github: "https://github.com/HASANALBANNA2024/akhi_admin_panel",
   },
   {
     category: "web",
-    title: "Ami Commerce",
-    badge: "E-commerce Website",
+    title: "Hadir Visitors",
+    badge: "Business Website",
     description:
-      "A modern e-commerce platform with product listing, cart, and secure payment integration.",
-    tech: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-    image: "/images/ami-commerce.svg",
-    demo: "#",
-    github: "#",
+      "A bilingual (English/Arabic) chauffeur and car rental website for Kuwait with a WhatsApp booking form, service pages, SEO and automated CI/CD deployment.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Redux", "GitHub Actions", "Cloudflare"],
+    image: "/images/hadir-visitors.png",
+    github: "https://github.com/HASANALBANNA2024/visitors_hadir",
   },
+
+  // ---------------- Cloud & Server ----------------
   {
     category: "cloud",
     title: "Cloud & Server Management",
@@ -168,44 +229,55 @@ export const projects = [
       "Domain, hosting, email server, FTP server and server configuration with secure setup.",
     tech: ["Linux", "Nginx", "Docker", "Cloudflare"],
     image: "/images/cloud-server.svg",
-    demo: "#",
-    github: "#",
     // ক্লাউড কার্ডের ডান পাশের "Key Features" লিস্ট
     features: [
       "Domain & Hosting Setup",
       "Email Server Configuration",
       "FTP Server Configuration",
-      "Cloud Computing (AWS)",
+      "Cloud Computing (Oracle Cloud)",
       "Server Configuration (Nginx, Apache, etc.)",
       "Security & Backup Setup",
     ],
   },
 ];
 
-// ---------- কাজের অভিজ্ঞতা ----------
+// ---------- কাজের অভিজ্ঞতা (নতুন থেকে পুরোনো) ----------
 export const experience = [
   {
-    title: "Lab Instructor (CSE Lab)",
-    company: "Uttara University | Office of IT",
-    period: "December 2025 - Present",
+    title: "Lab Instructor (Computer Lab)",
+    company: "Uttara University, Office of IT",
+    period: "Dec 2025 - Present",
     points: [
-      "Network survey and data mining for new network implementation",
-      "Created presentations for network sales",
+      "Lab classes as instructor and demonstrator; guide students on their projects",
+      "Solve students' programming issues, plus software and network problems",
+      "Manage daily lab operations, systems, LAN/Wi-Fi and IT assets",
     ],
   },
   {
-    title: "Assistant Network Engineer",
-    company: "Amber IT",
-    period: "2020 – 2021",
-    points: ["LAN network design and implementation", "Fiber network design and maintenance"],
+    title: "Officer",
+    company: "Star Line Specialised Hospital (120 Bedded)",
+    period: "Jul 2024 – Nov 2025",
+    points: [
+      "Led ICT setup: LAN, WAN, CCTV and IP telephony with Cisco devices",
+      "Installed and maintained Hospital Management System, backup and access control",
+    ],
   },
   {
     title: "Network Engineer",
     company: "Rajar Online Communication",
-    period: "2019 – 2020",
+    period: "Nov 2023 – Jun 2024",
     points: [
-      "LAN network configuration (Cisco Router, Camera)",
-      "Implementation and design for corporate customers",
+      "24/7 network monitoring; MikroTik and Cisco POP router configuration",
+      "IP addressing, OSPF/BGP routing, VLAN, bandwidth management",
+    ],
+  },
+  {
+    title: "Assistant Network Engineer (POP In-charge)",
+    company: "Amber IT Ltd",
+    period: "Apr 2022 – Oct 2023",
+    points: [
+      "Managed POP infrastructure and fiber link troubleshooting",
+      "LAN and WAN configuration for home and corporate clients",
     ],
   },
 ];
@@ -214,14 +286,14 @@ export const experience = [
 export const education = [
   {
     icon: "cap",
-    title: "Diploma in Data Telecommunication & Networking Technology",
+    title: "Diploma in Engineering (Computer Science & Engineering)",
     place: "Feni Computer Institute",
-    period: "2017 – 2022",
+    period: "2022 | CGPA 3.66 / 4.00",
   },
   {
     icon: "landmark",
-    title: "SSC",
-    place: "Math & History",
-    period: "2016 – 2017",
+    title: "Dakhil (Madrasah) — General",
+    place: "Korpai Kakirchar Islamia Fazil Madrasah",
+    period: "2017 | GPA 4.50 / 5.00",
   },
 ];
