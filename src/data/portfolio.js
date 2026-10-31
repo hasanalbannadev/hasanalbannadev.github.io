@@ -163,7 +163,7 @@ export const projects = [
       "A task manager with JWT login and sign-up, OTP password recovery, a dashboard with status counts, and full task CRUD (create, filter, update status, delete) on a REST API.",
     tech: ["Flutter", "Dart", "REST API", "JWT", "SharedPreferences", "Google Fonts"],
     image: "/images/task-manager.png",
-    github: "https://github.com/HASANALBANNA2024/task_manager_app",
+    github: "https://github.com/hasanalbannadev/task_manager_app",
   },
   {
     category: "flutter",
@@ -173,7 +173,7 @@ export const projects = [
       "A Bangla job circular app with category-wise listings (BCS, Govt, Bank, Defense, NGO...), job search and a preparation cell for previous questions.",
     tech: ["Flutter", "Dart", "Firebase", "Firestore"],
     image: "/images/chakri-info.jpg",
-    github: "https://github.com/HASANALBANNA2024/chakri_Info",
+    github: "https://github.com/hasanalbannadev/chakri_Info",
   },
   {
     category: "flutter",
@@ -183,7 +183,7 @@ export const projects = [
       "An offline-first Quran app with 10-language translations, a digital tasbih with audio and haptic feedback, location-based prayer times, bookmarks and reciter selection.",
     tech: ["Flutter", "Dart", "Provider", "just_audio", "Adhan", "SharedPreferences"],
     image: "/images/holy-quran.jpg",
-    github: "https://github.com/HASANALBANNA2024/holy_quran",
+    github: "https://github.com/hasanalbannadev/holy_quran",
   },
   {
     category: "flutter",
@@ -193,7 +193,7 @@ export const projects = [
       "A real-time smart mirror app with HD live camera, freeze frame, 1x to 5x zoom, studio lighting modes, 3s and 5s timers, and an in-app gallery with save and share.",
     tech: ["Flutter", "Dart", "Camera", "Gal", "SharePlus", "SharedPreferences"],
     image: "/images/mirror.png",
-    github: "https://github.com/HASANALBANNA2024/mirror",
+    github: "https://github.com/hasanalbannadev/mirror",
   },
 
   // ---------------- Web & E-commerce ----------------
@@ -205,7 +205,7 @@ export const projects = [
       "Full admin panel for the Akhi Lifestyle shop: products, inventory, orders, payments, customers, coupons, banners, reviews, reports and staff roles, powered by a FastAPI backend.",
     tech: ["Next.js", "React", "FastAPI", "REST API", "JavaScript"],
     image: "/images/akhi-admin.jpg",
-    github: "https://github.com/HASANALBANNA2024/akhi_admin_panel",
+    github: "https://github.com/hasanalbannadev/akhi_admin_panel",
   },
   {
     category: "web",
@@ -215,7 +215,7 @@ export const projects = [
       "A bilingual (English/Arabic) chauffeur and car rental website for Kuwait with a WhatsApp booking form, service pages, SEO and automated CI/CD deployment.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Redux", "GitHub Actions", "Cloudflare"],
     image: "/images/hadir-visitors.png",
-    github: "https://github.com/HASANALBANNA2024/visitors_hadir",
+    github: "https://github.com/hasanalbannadev/visitors_hadir",
   },
 
   // ---------------- Cloud & Server ----------------
