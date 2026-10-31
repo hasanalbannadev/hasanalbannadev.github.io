@@ -5,8 +5,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/hasan_al_banna',
-  assetPrefix: '/hasan_al_banna',
 };
 
 export default nextConfig;
