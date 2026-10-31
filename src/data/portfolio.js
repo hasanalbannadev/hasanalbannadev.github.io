@@ -15,7 +15,7 @@ export const profile = {
     "I specialize in building modern, fast and responsive web and mobile applications with Flutter and web technologies. I have experience in domain & hosting, server configuration, cloud computing and email/FTP server management. I love solving real-world problems and continuously learning new technologies.",
   email: "albannamdhasan48@gmail.com",
   phone: "+880 1336-913528",
-  location: "Savar, Dhaka, Bangladesh",
+  location: "Uttara, Dhaka, Bangladesh",
   years: "4+", // অভিজ্ঞতার বছর
 
   // হিরো সেকশনের ছবি (আসল ছবি দিলে এই path বদলান, যেমন "/images/hasan.png")
@@ -26,19 +26,18 @@ export const profile = {
   cvFileName: "Hasan_Al_Banna_CV.pdf",
 
   // এই পোর্টফোলিওর নিজের GitHub রিপোজিটরি
-  portfolioRepo: "https://github.com/HASANALBANNA2024/hasan_al_banna",
+  portfolioRepo: "https://github.com/hasanalbannadev/hasanalbannadev.github.io",
 
   // সোশ্যাল লিংক — যেটায় লিংক বসাবেন সেটাই সাইটে দেখাবে। ফাঁকা ("") থাকলে আইকন লুকানো থাকবে।
   // সমর্থিত: github, linkedin, x, facebook, instagram, youtube, telegram, whatsapp
   social: {
-    github: "https://github.com/HASANALBANNA2024",
-    linkedin: "",
-    x: "",
-    facebook: "",
-    instagram: "",
-    youtube: "",
-    telegram: "",
-    whatsapp: "", // যেমন: "https://wa.me/8801XXXXXXXXX"
+    github: "https://github.com/hasanalbannadev",
+    linkedin: "https://www.linkedin.com/in/md-hasan-al-banna-632302233/",
+    x: "https://x.com/md_al_Banna",
+    facebook: "https://www.facebook.com/share/1C8b5e8VSN/",
+    instagram: "https://www.instagram.com/mdbanna4",
+    telegram: "https://t.me/+8801336913528",
+    whatsapp: "https://wa.me/8801580361198", // যেমন: "https://wa.me/8801XXXXXXXXX"
   },
 };
 
@@ -49,7 +48,6 @@ const socialOrder = [
   ["x", "X"],
   ["facebook", "Facebook"],
   ["instagram", "Instagram"],
-  ["youtube", "YouTube"],
   ["telegram", "Telegram"],
   ["whatsapp", "WhatsApp"],
 ];
