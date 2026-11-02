@@ -1,0 +1,37 @@
+/* ===== গ্লোবাল স্টাইল + ডিজাইন কালার (Tailwind v4) ===== */
+@import "tailwindcss";
+
+/* এখান থেকে পুরো সাইটের কালার/ফন্ট বদলানো যাবে */
+@theme {
+  --color-brand: #1668e3;      /* মূল নীল */
+  --color-brand-dark: #0f52b8; /* হোভার নীল */
+  --color-navy: #0b1b45;       /* হেডিং এর গাঢ় নীল */
+  --color-ink: #566077;        /* প্যারাগ্রাফ টেক্সট */
+  --color-soft: #f2f7ff;       /* হালকা নীল ব্যাকগ্রাউন্ড */
+  --color-line: #e2e9f5;       /* বর্ডার */
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+/* সব সেকশনে ডিফল্ট কন্টেইনার (সর্বোচ্চ ১২৪০px) */
+@utility container-x {
+  width: 100%;
+  max-width: 1240px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+html {
+  scroll-behavior: smooth; /* মেনুতে ক্লিক করলে স্মুথ স্ক্রল */
+}
+
+/* স্টিকি নেভবারের নিচে যেন সেকশন চাপা না পড়ে */
+[id] {
+  scroll-margin-top: 84px;
+}
+
+body {
+  background: #fff;
+  color: var(--color-navy);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
