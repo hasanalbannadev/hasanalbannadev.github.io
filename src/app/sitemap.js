@@ -1,14 +1,10 @@
-export const dynamic = 'force-static';
-
-export default async function sitemap() {
-  const baseUrl = 'https://hasanalbannadev.github.io';
-
+export default function sitemap() {
   return [
     {
-      url: baseUrl,
+      url: 'https://hasanalbannadev.github.io',
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 1.0,
+      priority: 1,
     },
   ];
 }
