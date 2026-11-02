@@ -1,4 +1,4 @@
-// হোম পেজ — সবগুলো সেকশন এখানে সাজানো আছে (ডিজাইনের ক্রম অনুযায়ী)
+
 // md hasan al banna developer
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
