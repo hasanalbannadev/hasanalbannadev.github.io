@@ -5,14 +5,25 @@
 import { profile, heroHighlights, socialLinks as socials } from "../data/portfolio";
 import { Icon, BrandIcon } from "./Icons";
 
-// সোশ্যাল আইকন data/portfolio.js এর socialLinks থেকে আসে (লিংক দিলেই দেখাবে)
-
 export default function Hero() {
   return (
     <section id="home" className="bg-gradient-to-b from-[#f2f7ff] to-[#f8fbff]">
-      <div className="container-x grid gap-8 pt-12 lg:grid-cols-[1.2fr_1fr_0.62fr] lg:gap-6 lg:pt-0">
-        {/* ---------- বাম: টেক্সট ---------- */}
-        <div className="self-center pb-4 lg:py-14">
+      <div className="container-x grid gap-8 pt-8 lg:grid-cols-[1.2fr_1fr_0.62fr] lg:gap-6 lg:pt-0">
+        
+        {/* ---------- ১. প্রোফাইল ছবি (Mobile/Tab-e Sobcheye Upore, Desktop-e Majhe) ---------- */}
+        <div className="order-1 flex items-end justify-center lg:order-2">
+          <div className="flex h-[280px] w-full max-w-[320px] items-end justify-center overflow-hidden rounded-t-[48px] bg-gradient-to-br from-[#d9e8ff] to-[#eef5ff] p-4 sm:h-[320px] sm:max-w-[360px] lg:h-[360px] lg:max-w-[380px]">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={profile.photo}
+              alt={`${profile.firstName} ${profile.lastName}`}
+              className="h-full w-full rounded-t-[32px] object-cover object-top drop-shadow-md transition-all duration-300"
+            />
+          </div>
+        </div>
+
+        {/* ---------- ২. বাম: টেক্সট (Mobile/Tab-e Chobi-r Niche, Desktop-e Bame) ---------- */}
+        <div className="order-2 self-center pb-4 lg:order-1 lg:py-14">
           <div className="flex items-center gap-2 text-[14px] text-navy">
             <span className="h-px w-5 bg-brand" />
             Hello, I&apos;m
@@ -55,20 +66,8 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* ---------- মাঝে: প্রোফাইল ছবি (নীল ব্যাকগ্রাউন্ড ব্লবের ভেতরে) ---------- */}
-        <div className="flex items-end justify-center">
-          <div className="h-[340px] w-full max-w-[420px] overflow-hidden rounded-t-[56px] bg-gradient-to-br from-[#d9e8ff] to-[#eef5ff] lg:h-[400px]">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={profile.photo}
-              alt={`${profile.firstName} ${profile.lastName}`}
-              className="h-full w-full object-cover object-top"
-            />
-          </div>
-        </div>
-
-        {/* ---------- ডান: ট্যাগলাইন + তিনটা হাইলাইট ---------- */}
-        <div className="self-center pb-10 lg:py-14 lg:pl-4">
+        {/* ---------- ৩. ডান: ট্যাগলাইন + তিনটা হাইলাইট (Mobile/Tab-e Niche, Desktop-e Dane) ---------- */}
+        <div className="order-3 self-center pb-10 lg:order-3 lg:py-14 lg:pl-4">
           <p className="border-l-2 border-brand pl-3 text-[15px] font-semibold leading-snug text-navy">
             Turning
             <br />
@@ -91,6 +90,7 @@ export default function Hero() {
             ))}
           </ul>
         </div>
+
       </div>
     </section>
   );

@@ -15,7 +15,7 @@ export const profile = {
   years: "4+",
 
 
-  photo: "/images/Banna.jpg",
+  photo: "/images/md-hasan-al-banna-flutter-developer.jpg",
 
 
   cv: "/cv/Hasan_Al_Banna_CV.pdf",
