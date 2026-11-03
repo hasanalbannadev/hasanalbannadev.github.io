@@ -153,6 +153,16 @@ export const projects = [
     image: "/images/task_manager_app.jpg",
     github: "https://github.com/hasanalbannadev/task_manager_app",
   },
+    {
+    category: "flutter",
+    title: "Calorie Tracker App",
+    badge: "Flutter App",
+    description:
+      "A calorie tracker with a daily summary of total, goal and remaining calories, validated food entry, and a food list with delete, all updating instantly. Built with Riverpod and Clean Architecture using a local in-memory list.",
+    tech: ["Flutter", "Dart", "Riverpod", "Clean Architecture", "Material 3"],
+    image: "/images/Calorie_Tracker.png",
+    github: "https://github.com/hasanalbannadev/calorie_tracker",
+  },
   {
     category: "flutter",
     title: "Chakri Info",
